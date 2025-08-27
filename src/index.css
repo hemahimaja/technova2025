@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Neon gradient text helper */
+.neon-text {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(90deg, #22d3ee, #3b82f6);
+}
+
+.section {
+  @apply min-h-screen flex items-center justify-center px-5 py-16;
+}
+
+.card {
+  @apply bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur shadow-glow hover:bg-white/10 transition;
+}
