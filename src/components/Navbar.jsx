@@ -21,7 +21,7 @@ export default function Navbar({ onToggleTheme, theme }) {
     <header className={`fixed top-0 left-0 w-full z-50 transition ${scrolled ? 'bg-black/60 backdrop-blur border-b border-white/10' : 'bg-transparent'}`}>
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         <a href="#home" className="flex items-center gap-2">
-          <img src="/src/assets/logo.svg" alt="logo" className="h-8 w-8" />
+          <img src="/src/assets/image.jpg" alt="logo" className="h-8 w-8" />
           <span className="font-semibold tracking-wide">TechNova 2025</span>
         </a>
         <ul className="hidden md:flex items-center gap-6 text-sm">
