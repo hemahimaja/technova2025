@@ -1,5 +1,8 @@
 import React from "react";
-import logo from "../assets/technova-logo.jpg"; // ✅ Correct path
+import logo from "../assets/technova-logo.jpg";
+
+// ✅ Import social icons from react-icons
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,7 +11,11 @@ const Footer = () => {
         
         {/* ✅ Logo and name */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="TechNova Logo" className="h-10 w-10 object-contain rounded-full" />
+          <img
+            src={logo}
+            alt="TechNova Logo"
+            className="h-10 w-10 object-contain rounded-full"
+          />
           <span className="font-semibold text-lg">TechNova 2025</span>
         </div>
 
@@ -21,11 +28,20 @@ const Footer = () => {
           <a href="#sponsors" className="hover:text-cyan-300">Sponsors</a>
         </div>
 
-        {/* Socials */}
-        <div className="flex gap-4">
-          <a href="#" aria-label="Twitter" className="hover:text-cyan-300">🐦</a>
-          <a href="#" aria-label="Instagram" className="hover:text-cyan-300">📸</a>
-          <a href="#" aria-label="LinkedIn" className="hover:text-cyan-300">💼</a>
+        {/* ✅ Social Media Icons */}
+        <div className="flex gap-4 text-xl">
+          <a href="#" aria-label="Facebook" className="hover:text-cyan-300">
+            <FaFacebook />
+          </a>
+          <a href="#" aria-label="Twitter" className="hover:text-cyan-300">
+            <FaTwitter />
+          </a>
+          <a href="#" aria-label="Instagram" className="hover:text-cyan-300">
+            <FaInstagram />
+          </a>
+          <a href="#" aria-label="LinkedIn" className="hover:text-cyan-300">
+            <FaLinkedin />
+          </a>
         </div>
       </div>
 
