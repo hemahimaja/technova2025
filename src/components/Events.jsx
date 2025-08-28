@@ -4,11 +4,31 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const events = [
-  { title: "Hackathon", img: "/events/hackathon.jpg", desc: "48-hour coding challenge to build innovative solutions." },
-  { title: "Paper Presentation", img: "/events/paper.jpg", desc: "Showcase your research & technical writing." },
-  { title: "Poster", img: "/events/poster.jpg", desc: "Design impactful posters on futuristic tech ideas." },
-  { title: "Quiz", img: "/events/quiz.jpg", desc: "Test your technical knowledge with exciting rounds." },
-  { title: "FunTech", img: "/events/funtech.jpg", desc: "Engaging activities & mini-games with a tech twist." },
+  {
+    title: "Hackathon",
+    img: "/events/hackathon.jpg",
+    desc: "48-hour coding challenge to build innovative solutions.",
+  },
+  {
+    title: "Paper Presentation",
+    img: "/events/paper.jpg",
+    desc: "Showcase your research & technical writing.",
+  },
+  {
+    title: "Poster",
+    img: "/events/poster.jpg",
+    desc: "Design impactful posters on futuristic tech ideas.",
+  },
+  {
+    title: "Quiz",
+    img: "/events/quiz.jpg",
+    desc: "Test your technical knowledge with exciting rounds.",
+  },
+  {
+    title: "FunTech",
+    img: "/events/funtech.jpg",
+    desc: "Engaging activities & mini-games with a tech twist.",
+  },
 ];
 
 const Events = () => {
@@ -16,15 +36,19 @@ const Events = () => {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 3,
+    slidesToShow: 3, // default for desktop
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     swipeToSlide: true,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 1024, // tablet + mobile
+        settings: {
+          slidesToShow: 1, // show only 1 card
+        },
+      },
     ],
   };
 
@@ -36,7 +60,6 @@ const Events = () => {
           {events.map((event, idx) => (
             <div key={idx} className="px-4">
               <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform h-full">
-                {/* ✅ Added border here */}
                 <img
                   src={event.img}
                   alt={event.title}
