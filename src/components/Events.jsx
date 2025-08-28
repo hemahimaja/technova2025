@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // ✅ clean icons
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -31,29 +32,52 @@ const events = [
   },
 ];
 
+// ✅ Custom Arrow Components
+const NextArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute right-2 top-1/2 -translate-y-1/2 bg-cyan-500 text-black p-2 rounded-full shadow-md hover:bg-cyan-400 z-10"
+  >
+    <ChevronRight size={20} />
+  </button>
+);
+
+const PrevArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="absolute left-2 top-1/2 -translate-y-1/2 bg-cyan-500 text-black p-2 rounded-full shadow-md hover:bg-cyan-400 z-10"
+  >
+    <ChevronLeft size={20} />
+  </button>
+);
+
 const Events = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 3, // default for desktop
+    slidesToShow: 3, // Desktop
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     swipeToSlide: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024, // tablet + mobile
+        breakpoint: 1024, // Tablet + Mobile
         settings: {
-          slidesToShow: 1, // show only 1 card
+          slidesToShow: 1, // ✅ Only 1 card
+          centerMode: false,
+          variableWidth: false,
         },
       },
     ],
   };
 
   return (
-    <section id="events" className="py-16 bg-black text-white">
+    <section id="events" className="py-16 bg-black text-white relative">
       <h2 className="text-3xl font-bold text-center mb-10">Sub-Events</h2>
       <div className="max-w-6xl mx-auto px-6">
         <Slider {...settings}>
