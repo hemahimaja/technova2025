@@ -5,7 +5,6 @@ import About from './components/About.jsx'
 import Events from './components/Events.jsx'
 import Schedule from './components/Schedule.jsx'
 import Contact from './components/Contact.jsx'
-import Sponsors from './components/Sponsors.jsx'   // ✅ import sponsors
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -27,7 +26,7 @@ export default function App() {
         <Events />
         <Schedule />
         <Contact />
-        <Sponsors />   {/* ✅ Sponsors carousel added here */}
+         {/* ✅ Sponsors carousel added here */}
       </main>
       <Footer />
     </div>

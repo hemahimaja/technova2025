@@ -25,7 +25,7 @@ const Footer = () => {
           <a href="#events" className="hover:text-cyan-300">Events</a>
           <a href="#schedule" className="hover:text-cyan-300">Schedule</a>
           <a href="#contact" className="hover:text-cyan-300">Contact</a>
-          <a href="#sponsors" className="hover:text-cyan-300">Sponsors</a>
+          
         </div>
 
         {/* ✅ Social Media Icons */}
